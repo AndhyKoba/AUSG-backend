@@ -16,6 +16,7 @@
     "nodemon": "^3.1.10"
   },
   "dependencies": {
+    "express": "^4.19.2",
     "@tanstack/react-table": "^8.21.3",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
