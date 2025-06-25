@@ -1,4 +1,3 @@
-// Importation des modules nécessaires
 import express from "express";
 import dotenv from 'dotenv';
 import cors from 'cors';
@@ -12,13 +11,10 @@ import transactionRoute from './routes/transaction.route.js';
 // Charger les variables d'environnement depuis le fichier .env
 dotenv.config();
 
-// Afficher l'environnement actuel (utile pour le débogage)
 console.log("NODE_ENV:", process.env.NODE_ENV);
 
-// Initialiser l'application Express
 const app = express();
 
-// Définir le port d'écoute, depuis les variables d'environnement ou par défaut à 5000
 const port = process.env.PORT || 5000;
 
 // Résoudre le chemin absolu du répertoire courant pour la gestion des fichiers statiques.
@@ -26,12 +22,10 @@ const port = process.env.PORT || 5000;
 // path.resolve() sans argument renvoie le répertoire de travail actuel.
 const __dirname = path.resolve();
 
-// --- Configuration des middlewares ---
 
 // Activer CORS (Cross-Origin Resource Sharing)
-// Permet à votre frontend (ex: localhost:5173) de faire des requêtes vers ce backend.
 app.use(cors({
-    origin: 'https://ausg-frontend.vercel.app', // Permettre les requêtes uniquement depuis cette origine
+    origin: 'https://ausg.vercel.app', // Permettre les requêtes uniquement depuis cette origine
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'], // Méthodes HTTP autorisées
     allowedHeaders: ['Content-Type', 'Authorization'], // En-têtes de requête autorisés
 }));
