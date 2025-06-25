@@ -31,7 +31,7 @@ const __dirname = path.resolve();
 // Activer CORS (Cross-Origin Resource Sharing)
 // Permet à votre frontend (ex: localhost:5173) de faire des requêtes vers ce backend.
 app.use(cors({
-    origin: 'http://localhost:5173', // Permettre les requêtes uniquement depuis cette origine
+    origin: 'https://ausg-frontend.vercel.app', // Permettre les requêtes uniquement depuis cette origine
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'], // Méthodes HTTP autorisées
     allowedHeaders: ['Content-Type', 'Authorization'], // En-têtes de requête autorisés
 }));
